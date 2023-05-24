@@ -67,9 +67,7 @@ st.info(""" ##### In This CEX to DEX Transactions you can find: ####
 #########################################################################
 st.write(""" ## CEX to DEX Overview  """)
 
-st.write("""  CEX to DEX transactions refer to the movement of assets from centralized exchanges to decentralized exchanges. These transactions have gained significant attention in recent times due to several factors. First, users who value the security and control offered by DEX platforms may decide to transfer their funds from CEXs to DEXs, seeking a more self-custodial approach to trading. Second, certain tokens or projects may be exclusively available on either CEXs or DEXs, prompting users to navigate between platforms to access specific assets.   
-Users need to evaluate factors such as liquidity, trading volume, fees, user experience, and available trading pairs when choosing between CEX and DEX platforms. Additionally, the mechanics of asset transfer, including network compatibility, wallet integration, and transaction speed, play crucial roles in the overall experience.
-
+st.write("""  Understanding CEX to DEX transactions and the underlying dynamics between centralized and decentralized exchanges becomes essential for cryptocurrency enthusiasts and traders alike. By bridging the gap between these two distinct paradigms, users can explore the benefits of both centralized liquidity and decentralized autonomy, adapting their strategies to their specific needs.
     """)
 
 
@@ -92,8 +90,10 @@ with c2:
 #########################################################################
 st.write(""" ## CEX to DEX Platforms  """)
 
-st.write(""" 
-Understanding CEX to DEX transactions and the underlying dynamics between centralized and decentralized exchanges becomes essential for cryptocurrency enthusiasts and traders alike. By bridging the gap between these two distinct paradigms, users can explore the benefits of both centralized liquidity and decentralized autonomy, adapting their strategies to their specific needs.
+st.write(""" Coinbase becomes the leading source. Coinbase is the source of the vast majority of UNI transactions. These transactions have gained significant attention in recent times due to several factors. First, users who value the security and control offered by DEX platforms may decide to transfer their funds from CEXs to DEXs, seeking a more self-custodial approach to trading. Second, certain tokens or projects may be exclusively available on either CEXs or DEXs, prompting users to navigate between platforms to access specific assets.Users need to evaluate factors such as liquidity, trading volume, fees, user experience, and available trading pairs when choosing between CEX and DEX platforms.   
+Let's investigate the DEXs on the destination side. The statistics show that more than 51% of the transferred $UNI tokens have been received by the Uniswap platform from the CEXs.
+
+
     """)
 
 c1, c2 = st.columns(2)
@@ -114,12 +114,10 @@ with c2:
 
 
 
-
-
-
 st.write(""" ## CEX to DEX On Time Line  """)
 
-st.write("""  CEXs, often characterized by their user-friendly interfaces and robust liquidity, have traditionally served as go-to platforms for traders seeking speed and convenience. These exchanges operate under a centralized authority, where users deposit their funds into wallets managed by the exchange itself. Consequently, this model grants CEXs control over users' assets and requires placing trust in the exchange's security measures and operational integrity.   
+st.write("""  Coinbasedominance has generally not changed over time. Although it is not as dominant as it is in terms of the quantity of UNI transfers, Coinbase still has a sizable share of the market in terms of volume. We see that Coinbase sends UNI tokens to several DEXes, with Uniswap being the main recipient. Transfers to various DEXes can also be facilitated using IDEX. It comes as no surprise that Uniswap is the main beneficiary of transfers from CEXes.
+CEXs, often characterized by their user-friendly interfaces and robust liquidity, have traditionally served as go-to platforms for traders seeking speed and convenience. These exchanges operate under a centralized authority, where users deposit their funds into wallets managed by the exchange itself. Consequently, this model grants CEXs control over users' assets and requires placing trust in the exchange's security measures and operational integrity.   
 On the other hand, DEXs operate on decentralized networks, utilizing smart contracts and blockchain technology to execute transactions. In contrast to CEXs, DEX platforms enable users to maintain full control over their funds throughout the trading process. By eliminating the need for intermediaries and central authorities, DEXs offer enhanced security, privacy, and resilience against hacking attempts or regulatory interventions. This decentralized nature resonates with the core philosophy of cryptocurrencies, empowering users with financial sovereignty.   
     """)
 
@@ -130,14 +128,14 @@ On the other hand, DEXs operate on decentralized networks, utilizing smart contr
 fig = px.bar(df4, x= 'DATE', y="USD_AMOUNT", color="FROM_PLATFORM",
              title='Weekly CEX to DEX USD Volume Base on CEX Platform')
 fig.update_layout(legend_title=None, xaxis_title=None,
-                  yaxis_title='Daily Number of Miners')
+                  yaxis_title='USD Amount')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 # Bar Chart Stacked
 fig = px.bar(df4, x= 'DATE', y="USD_AMOUNT", color="TO_PLATFORM",
              title='Weekly USD Volume Base on DEX Platform')
 fig.update_layout(legend_title=None, xaxis_title=None,
-                  yaxis_title='Daily Number of Miners')
+                  yaxis_title='USD Amount')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 c1,c2= st.columns(2)
@@ -145,17 +143,17 @@ c1,c2= st.columns(2)
 with c1:
     # Bar Chart Stacked
     fig = px.bar(df4, x= 'DATE', y="NUMBER_OF_USERS", color="FROM_PLATFORM",
-                title='Daily Number of Distinct Miners Before and After Shanghai Update')
+                title='Number of Users Base on DEX Platform')
     fig.update_layout(legend_title=None, xaxis_title=None,
-                    yaxis_title='Daily Number of Miners')
+                    yaxis_title='NUMBER_OF_USERS')
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 with c2:    
     # Normalized area
     fig = px.area(df3, x="DATE", y="UNI_AMOUNT", color="TO_PLATFORM",
-                title='Top Categories in terms of actions after bridging to Near: Number of transactions, normalised', groupnorm='percent')
+                title='UNI Amount Transferred Volume Base on DEX Platform', groupnorm='percent')
     fig.update_layout(legend_title=None, xaxis_title=None,
-                    yaxis_title="NUMBER_TRANSACTIONS")
+                    yaxis_title="UNI AMOUNT")
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 #################################################################################
