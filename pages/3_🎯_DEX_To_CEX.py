@@ -94,7 +94,7 @@ with c2:
 #########################################################################
 st.write(""" ## DEX to CEX Platforms  """)
 
-st.write("""  DEXs eliminate the need for a central intermediary, which reduces the counterparty risk associated with trusting a centralized exchange. In Uniswap, transactions are executed peer-to-peer through the use of liquidity pools and automated market-making algorithms. This reduces the risk of hacks or malicious activities that can occur on centralized platforms. CEXs, however, require users to trust the exchange with their funds, which introduces a degree of counterparty risk.    
+st.write("""  It is clear from the data analysis that Uniswap, the top DEX platform, has a big impact on the movement of UNI tokens to CEXs. Uniswap has become the leading sender DEX platform over the last year, which is as expected considering that UNI is the platform's native token. Surprisingly, Uniswap is the source of practically all UNI tokens delivered to CEXs. In Uniswap, transactions are executed peer-to-peer through the use of liquidity pools and automated market-making algorithms. This reduces the risk of hacks or malicious activities that can occur on centralized platforms. CEXs, however, require users to trust the exchange with their funds, which introduces a degree of counterparty risk.    
 
     """)
 

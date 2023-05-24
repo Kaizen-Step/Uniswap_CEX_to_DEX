@@ -108,7 +108,7 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 ##################################################################################################
 st.write(""" ##  DEX to CEX Transactions Correlation with UNI Token Price """)
 
-st.write("""  the price correlation may also be influenced by market sentiment, overall market conditions, regulatory developments, and the broader adoption of decentralized exchanges. Positive sentiment surrounding DEXs and the decentralized finance (DeFi) ecosystem, in general, can contribute to the appreciation of UNI token price, irrespective of DEX to CEX transactions.  
+st.write("""  Market sentiment, general market circumstances, legislative developments, and the increased use of decentralized exchanges may potentially have an impact on price correlation. Regardless of DEX-to-CEX transactions, positive perception of DEXs and the decentralized finance (DeFi) ecosystem in general may support an increase in the price of the UNI coin. There is no concrete proof that these trades significantly affected the price of UNI tokens.
 
  """)
 # Bar with Lines
