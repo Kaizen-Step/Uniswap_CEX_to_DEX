@@ -94,7 +94,7 @@ with c2:
 #########################################################################
 st.write(""" ## DEX to CEX Platforms  """)
 
-st.write("""  It is clear from the data analysis that Uniswap, the top DEX platform, has a big impact on the movement of UNI tokens to CEXs. Uniswap has become the leading sender DEX platform over the last year, which is as expected considering that UNI is the platform's native token. Surprisingly, Uniswap is the source of practically all UNI tokens delivered to CEXs. In Uniswap, transactions are executed peer-to-peer through the use of liquidity pools and automated market-making algorithms. This reduces the risk of hacks or malicious activities that can occur on centralized platforms. CEXs, however, require users to trust the exchange with their funds, which introduces a degree of counterparty risk.    
+st.write("""  It is clear from the data analysis that Uniswap, the top DEX platform, has a big impact on the movement of UNI tokens to CEXs. Uniswap has become the leading sender DEX platform over the last year, which is as expected considering that UNI is the platform's native token. Surprisingly, Uniswap is the source of practically 75% UNI tokens delivered to CEXs. In Uniswap, transactions are executed peer-to-peer through the use of liquidity pools and automated market-making algorithms. This reduces the risk of hacks or malicious activities that can occur on centralized platforms. CEXs, however, require users to trust the exchange with their funds, which introduces a degree of counterparty risk.    
 
     """)
 
@@ -155,7 +155,7 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 st.write(""" ## Transaction Daily and Hourly Patterns """)
 
-st.write("""  Users may choose to move their funds from a CEX to a DEX to take advantage of the unique features offered by decentralized exchanges, such as increased control over funds, access to a wider range of trading pairs, and participation in decentralized finance (DeFi) protocols. The transfer typically involves withdrawing funds from the centralized exchange and depositing them into the user's wallet or smart contract on the decentralized exchange, allowing for trading directly on the DEX platform.  
+st.write("""  The daily and hourly patterns of Uniswap token movement between DEX and CEX can vary based on several factors. It's important to note that the daily and hourly patterns of Uniswap token movement between DEX and CEX are subject to change and can vary based on market conditions, token popularity, regulatory factors, and individual trading strategies. Monitoring these patterns can provide insights into market trends and the behavior of traders within the ecosystem.
     """)
 
 
