@@ -51,11 +51,11 @@ In late 2021, the leading DEX Uniswap was charging a 0.05% transaction fee on th
 st.write("""
 ## Methodology ##  
 
-Using the flipside database, we go in-depth on the UNI token DEX to CEX and CEX to DEX flow in this dashboard. We created a complete main table with contract labels using the "ethereum.core.ez_token_transfers" table and the "ethereum.core.dim_labels," "LABEL_TYPE," and "LABEL" columns defined from and to contract addresses of each transaction on the token transfer table. This allowed us to easily filter the source and destination of each UNI transaction. The additional transactions were then removed, and the rows with null labels were given undefined contract addresses as names. We examine the amount of USD and UNI, the number of users, and the number of transactions going from CEX to DEX using this table. Finally, we look into the relationship between the price of these UNI tokens and their pricing.
+Using the flipside database, we go in-depth on the UNI token DEX to CEX and CEX to DEX flow in this dashboard. We created a complete main table with contract labels using the "ethereum.core.ez_token_transfers" table and the "ethereum.core.dim_labels," "LABEL_TYPE," and "LABEL" columns defined from and to contract addresses of each transaction on the token transfer table. This allowed us to easily filter the source and destination of each UNI transaction. The additional transactions were then removed, and the rows with null labels were given undefined contract addresses as names. We examine the amount of USD and UNI, the number of users, and the number of transactions going from CEX to DEX using this table. Finally, we look into the relationship between the price of UNI tokens and exchanges impact, and is there a correlation between these CEX to DEX and vice versa transactions and the UNI token price?
 
 
 """)
-
+st.warning("""  Weekly charts on this dashboard have no time boundries, however daily charts and other metrics are limited to the last 365 days starting on May 20, 2022.       """)
 
 st.text(" \n")
 st.write("""   

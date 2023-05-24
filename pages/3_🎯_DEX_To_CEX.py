@@ -65,7 +65,7 @@ st.info(""" ##### In This DEX to CEX Transactions you can find: ####
 
 """)
 #########################################################################
-st.write(""" ## UNI Token DEX to CEX flow Overview  """)
+st.write(""" ## UNI Token DEX to CEX Flow Overview  """)
 
 st.write("""  In a DEX like Uniswap, users have full control and ownership of their funds. They interact with the exchange directly through smart contracts, which execute trades based on predefined rules. On the other hand, CEXs require users to deposit their funds into centralized wallets owned and managed by the exchange. This means users do not have direct control over their tokens during trading, as they rely on the exchange to facilitate transactions.
     """)

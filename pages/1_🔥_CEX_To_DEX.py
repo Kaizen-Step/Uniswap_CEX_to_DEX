@@ -65,7 +65,7 @@ st.info(""" ##### In This CEX to DEX Transactions you can find: ####
 
 """)
 #########################################################################
-st.write(""" ## CEX to DEX Overview  """)
+st.write(""" ## Overview  """)
 
 st.write("""  Understanding CEX to DEX transactions and the underlying dynamics between centralized and decentralized exchanges becomes essential for cryptocurrency enthusiasts and traders alike. By bridging the gap between these two distinct paradigms, users can explore the benefits of both centralized liquidity and decentralized autonomy, adapting their strategies to their specific needs.
     """)
