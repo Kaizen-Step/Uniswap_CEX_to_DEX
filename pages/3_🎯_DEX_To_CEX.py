@@ -70,22 +70,21 @@ st.write(""" ## UNI Token DEX to CEX flow Overview  """)
 st.write("""  In a DEX like Uniswap, users have full control and ownership of their funds. They interact with the exchange directly through smart contracts, which execute trades based on predefined rules. On the other hand, CEXs require users to deposit their funds into centralized wallets owned and managed by the exchange. This means users do not have direct control over their tokens during trading, as they rely on the exchange to facilitate transactions.
     """)
 
-
 c1, c2 = st.columns(2)
-
 with c1:
-    # Pie
-    fig = px.pie(df, values="USD_AMOUNT",
-                names="FROM_PLATFORM", title='DEX to CEX USD Amount Based on DEX Platform')
-    fig.update_layout(legend_title=None, legend_y=0.5)
-    fig.update_traces(textinfo='percent+label', textposition='inside')
-    st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+    st.metric(label='**Number of DEX To CEX Transactions**',
+              value=str(df2["COUNT"].map('{:,.0f}'.format).values[0]))
+    st.metric(label='**Number of DEX To CEX Unique Users**',
+              value=str(df2["NUMBER_OF_USERS"].map('{:,.0f}'.format).values[0]))
 with c2:
-    fig = px.pie(df, values="USD_AMOUNT",
-                names="TO_PLATFORM", title='DEX to CEX USD Amount Based on CEX Platform')
-    fig.update_layout(legend_title=None, legend_y=0.5)
-    fig.update_traces(textinfo='percent+label', textposition='inside')
-    st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+    st.metric(label='**Total USD Volume**',
+              value=df2["USD_AMOUNT"].map('{:,.0f}'.format).values[0])
+    st.metric(label='**Total UNI Token Volume**',
+              value=str(df2["UNI_AMOUNT"].map('{:,.0f}'.format).values[0]))
+
+
+
+
 
 
 
@@ -104,17 +103,16 @@ c1, c2 = st.columns(2)
 with c1:
     # Pie
     fig = px.pie(df, values="USD_AMOUNT",
-                names="FROM_PLATFORM", title='CEX to DEX USD Amount Based on CEX Platform')
+                names="FROM_PLATFORM", title='DEX to CEX USD Amount Based on DEX Platform')
     fig.update_layout(legend_title=None, legend_y=0.5)
     fig.update_traces(textinfo='percent+label', textposition='inside')
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 with c2:
     fig = px.pie(df, values="USD_AMOUNT",
-                names="TO_PLATFORM", title='CEX to DEX USD Amount Based on DEX Platform')
+                names="TO_PLATFORM", title='DEX to CEX USD Amount Based on CEX Platform')
     fig.update_layout(legend_title=None, legend_y=0.5)
     fig.update_traces(textinfo='percent+label', textposition='inside')
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
 
 
 
